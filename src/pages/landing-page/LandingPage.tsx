@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import Logo from "../../components/logo";
-import SocialIcons from "../../components/social-icons";
+import Logo from "components/logo";
+import SocialIcons from "components/social-icons";
 import {NavLink} from "react-router-dom";
-import MeInLaptop from "../../assets/characters/MeInLaptop";
-import Spacer from "../../components/spacer/Spacer";
+import MeInLaptop from "assets/characters/MeInLaptop";
+import {motion} from "framer-motion";
 
 const LandingPageBody = styled.div`
   background: ${props => props.theme.body};
@@ -72,14 +72,14 @@ const MySkills = styled(NavLink)`
   z-index: 1;
 `;
 
-const CenterBody = styled.div`
+const CenterBody = styled(motion.div)`
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   
   width: 65vw;
-  height: 70vh;
+  height: 55vh;
   display: flex;
   background: ${props => props.theme.body};
   border: 3px solid ${props => props.theme.text};
@@ -93,15 +93,16 @@ const CenterSubBody = styled.div`
   justify-content: center;
 `;
 
-const TextBody = styled.div`
+const TextBody = styled(motion.div)`
+  color: ${props => props.theme.text};
+  cursor: default;
+
   display: flex;
   flex-direction: column;
-  &>*:not(last-child) {
-    margin: 5px 0;
-  }
+  justify-content: space-evenly;
 `;
 
-const MeInLaptopBody = styled.div`
+const MeInLaptopBody = styled(motion.div)`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -113,16 +114,28 @@ const LandingPage = () => {
       <Logo />
       <SocialIcons />
 
-      <CenterBody>
+      <CenterBody
+        initial={{height: 0}}
+        animate={{height: "65vh"}}
+        transition={{ type: 'spring', duration: 2}}
+      >
         <CenterSubBody>
-          <TextBody>
+          <TextBody
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{ duration: 1, delay: 1 }}
+          >
             <h1 style={{fontSize: 30,}}>Hi,</h1>
             <h1 style={{fontSize: 50,}}>I'm Shan</h1>
-            <h1 style={{fontSize: 20,}}>I code because im a coderist</h1>
+            <h1 style={{fontSize: 20, fontWeight: '400'}}>I code because im a coderist</h1>
           </TextBody>
         </CenterSubBody>
         <CenterSubBody>
-          <MeInLaptopBody>
+          <MeInLaptopBody
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{ duration: 1, delay: 1 }}
+          >
             <MeInLaptop />
           </MeInLaptopBody>
         </CenterSubBody>

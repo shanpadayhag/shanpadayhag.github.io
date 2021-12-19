@@ -1,5 +1,4 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 import FacebookIcon from "assets/icons/FacebookIcon";
 import GithubIcon from "assets/icons/GitHubIcon";
 import styled from "styled-components";
@@ -44,7 +43,6 @@ const SocialIcons = () => (
         <FacebookIcon />
       </a>
     </div>
-
     <Line />
   </SocialIconsBody>
 );
