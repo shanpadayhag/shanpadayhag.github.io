@@ -20,7 +20,7 @@ const LandingPageBody = styled.div`
   }
 `;
 
-const ContactMe = styled("a")`
+const ContactMe = styled.a`
   color: ${props => props.theme.text};
   position: absolute;
   top: 2rem;
@@ -141,35 +141,50 @@ const LandingPage = () => {
         </CenterSubBody>
       </CenterBody>
 
-      <ContactMe href="mailto:shanpadayhag@gmail.com" target="_blank" rel="noopener noreferrer">
-        <h2>
+      <ContactMe href="mailto:shanpadayhag@gmail.com">
+        <motion.h2
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.8}}
+        >
           Contact me
-        </h2>
+        </motion.h2>
       </ContactMe>
 
       <Portfolio to={'/portfolio/portfolio'}>
-        <h2>
+        <motion.h2
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.8}}
+        >
           Portfolio
-        </h2>
+        </motion.h2>
       </Portfolio>
 
       <Work to={'/portfolio/work'}>
-        <h2>
+        <motion.h2
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.8}}
+        >
           Work
-        </h2>
+        </motion.h2>
       </Work>
 
       <BottomBar>
         <About to="/portfolio/about">
-          <h2>
+          <motion.h2
+            whileHover={{scale: 1.1}}
+            whileTap={{scale: 0.8}}
+          >
             About
-          </h2>
+          </motion.h2>
         </About>
 
         <MySkills to="/portfolio/my-skills">
-          <h2>
+          <motion.h2
+            whileHover={{scale: 1.1}}
+            whileTap={{scale: 0.8}}
+          >
             My Skills
-          </h2>
+          </motion.h2>
         </MySkills>
       </BottomBar>
   </LandingPageBody>
