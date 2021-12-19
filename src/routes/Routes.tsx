@@ -6,8 +6,8 @@ import PageNotFoundContainer from "pages/page-not-found/PageNotFoundContainer";
 const Routes = () => (
   <BrowserRouter>
     <RoutesContainer>
-      <Route path="/" element={<LandingPageContainer />} />
-      <Route path="*" element={<PageNotFoundContainer />} />
+      <Route path="/portfolio/" element={<LandingPageContainer />} />
+      <Route path="/portfolio/*" element={<PageNotFoundContainer />} />
     </RoutesContainer>
   </BrowserRouter>
 );
