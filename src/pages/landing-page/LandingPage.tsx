@@ -134,26 +134,26 @@ const LandingPage = () => {
         </h2>
       </ContactMe>
 
-      <Portfolio to={'/portfolio'}>
+      <Portfolio to={'/portfolio/portfolio'}>
         <h2>
           Portfolio
         </h2>
       </Portfolio>
 
-      <Work to={'/work'}>
+      <Work to={'/portfolio/work'}>
         <h2>
           Work
         </h2>
       </Work>
 
       <BottomBar>
-        <About to="/about">
+        <About to="/portfolio/about">
           <h2>
             About
           </h2>
         </About>
 
-        <MySkills to="/my-skills">
+        <MySkills to="/portfolio/my-skills">
           <h2>
             My Skills
           </h2>
