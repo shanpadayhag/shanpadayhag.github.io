@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Logo from "../../components/logo";
 import SocialIcons from "../../components/social-icons";
 import {NavLink} from "react-router-dom";
+import MeInLaptop from "../../assets/characters/MeInLaptop";
+import Spacer from "../../components/spacer/Spacer";
 
 const LandingPageBody = styled.div`
   background: ${props => props.theme.body};
@@ -18,10 +20,6 @@ const LandingPageBody = styled.div`
   }
 `;
 
-const PaddingContainer = styled.div`
-  padding: 2rem;
-`;
-
 const ContactMe = styled("a")`
   color: ${props => props.theme.text};
   position: absolute;
@@ -35,7 +33,7 @@ const Portfolio = styled(NavLink)`
   color: ${props => props.theme.text};
   position: absolute;
   top: 50%;
-  right: calc(1rem + 2vw);
+  right: 2rem;
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
@@ -46,7 +44,7 @@ const Work = styled(NavLink)`
   position: absolute;
   top: 50%;
   left: 2rem;
-  transform: rotate(270deg) translate(50%, -50%);
+  transform: rotate(270deg) translate(100%, -50%);
   text-decoration: none;
   z-index: 1;
 `;
@@ -74,10 +72,61 @@ const MySkills = styled(NavLink)`
   z-index: 1;
 `;
 
+const CenterBody = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 65vw;
+  height: 70vh;
+  display: flex;
+  background: ${props => props.theme.body};
+  border: 3px solid ${props => props.theme.text};
+`;
+
+const CenterSubBody = styled.div`
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const TextBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  &>*:not(last-child) {
+    margin: 5px 0;
+  }
+`;
+
+const MeInLaptopBody = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 const LandingPage = () => {
   return <LandingPageBody>
-    <PaddingContainer>
       <Logo />
+      <SocialIcons />
+
+      <CenterBody>
+        <CenterSubBody>
+          <TextBody>
+            <h1 style={{fontSize: 30,}}>Hi,</h1>
+            <h1 style={{fontSize: 50,}}>I'm Shan</h1>
+            <h1 style={{fontSize: 20,}}>I code because im a coderist</h1>
+          </TextBody>
+        </CenterSubBody>
+        <CenterSubBody>
+          <MeInLaptopBody>
+            <MeInLaptop />
+          </MeInLaptopBody>
+        </CenterSubBody>
+      </CenterBody>
 
       <ContactMe href="mailto:shanpadayhag@gmail.com" target="_blank" rel="noopener noreferrer">
         <h2>
@@ -97,8 +146,6 @@ const LandingPage = () => {
         </h2>
       </Work>
 
-      <SocialIcons />
-
       <BottomBar>
         <About to="/about">
           <h2>
@@ -112,7 +159,6 @@ const LandingPage = () => {
           </h2>
         </MySkills>
       </BottomBar>
-    </PaddingContainer>
   </LandingPageBody>
 }
 
