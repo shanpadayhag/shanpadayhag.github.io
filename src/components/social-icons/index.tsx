@@ -18,6 +18,14 @@ const SocialIconsBody = styled.div`
   &>*:not(last-child) {
     margin: 0.5rem 0;
   }
+  
+  &>*:last-child {
+    margin: 0 0;
+  }
+
+  @media only Screen and (max-width: 767px) {
+    left: 1rem;
+  }
 `;
 
 const Line = styled.span`

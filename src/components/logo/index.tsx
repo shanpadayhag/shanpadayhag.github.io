@@ -11,6 +11,16 @@ const LogoText = styled.h1`
   left: 2rem;
   top: 2rem;
   z-index: 3;
+
+  @media only Screen and (max-width: 767px) {
+    font-size: 24px;
+    left: 1rem;
+    top: 2rem;
+  }
+
+  @media only Screen and (max-width: 532px) {
+    font-size: 20px;
+  }
 `;
 
 const Logo = () => {

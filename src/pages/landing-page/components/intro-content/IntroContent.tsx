@@ -9,7 +9,6 @@ const TextBody = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 18rem;
   
   text {
     cursor: default;
@@ -21,26 +20,46 @@ const TextBody = styled(motion.div)`
   }
 
   @media only Screen and (max-width: 1024px) {
+    width: 18rem;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @media only Screen and (max-width: 532px) {
+    width: 11rem;
   }
 `;
 
 const TextOne = styled(motion.text)`
   font-size: 30px;
   font-weight: bold;
+
+  @media only Screen and (max-width: 767px) {
+    font-size: 20px;
+    font-weight: bold;
+  }
 `;
 
 const TextTwo = styled(motion.text)`
   font-size: 50px;
   font-weight: bold;
+
+  @media only Screen and (max-width: 767px) {
+    font-size: 35px;
+    font-weight: bold;
+  }
 `;
 
 const TextThree = styled(motion.text)`
   font-size: 20px;
   font-weight: 400;
+
+  @media only Screen and (max-width: 767px) {
+    font-size: 17px;
+    font-weight: 400;
+  }
 `;
 
 const IntroContent = () => (

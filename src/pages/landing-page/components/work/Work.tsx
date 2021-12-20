@@ -10,6 +10,10 @@ const WorkBody = styled(NavLink)`
   transform: rotate(270deg) translate(100%, -50%);
   text-decoration: none;
   z-index: 1;
+
+  @media only Screen and (max-width: 767px) {
+    left: 1rem;
+  }
 `;
 
 const Work = () => (

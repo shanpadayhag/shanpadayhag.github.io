@@ -7,9 +7,13 @@ const PortfolioBody = styled(NavLink)`
   position: absolute;
   top: 50%;
   right: 2rem;
-  transform: rotate(90deg) translate(-50%, -50%);
+  transform: rotate(90deg) translate(-50%, -150%);
   text-decoration: none;
   z-index: 1;
+
+  @media only Screen and (max-width: 767px) {
+    right: 1rem;
+  }
 `;
 
 const Portfolio = () => (
