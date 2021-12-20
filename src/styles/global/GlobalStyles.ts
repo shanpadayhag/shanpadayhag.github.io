@@ -16,6 +16,15 @@ const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
   }
+  
+  .disableSelect {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 `;
 
 export default GlobalStyles;

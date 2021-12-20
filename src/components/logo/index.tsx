@@ -15,7 +15,7 @@ const LogoText = styled.h1`
 
 const Logo = () => {
   return (
-    <LogoText>
+    <LogoText className={'disableSelect'}>
       LOGO
     </LogoText>
   )

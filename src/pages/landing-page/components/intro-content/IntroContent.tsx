@@ -9,6 +9,15 @@ const TextBody = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  
+  text {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 `;
 
 const TextOne = styled(motion.text)`
