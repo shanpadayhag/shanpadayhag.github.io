@@ -2,7 +2,10 @@ import styled from "styled-components";
 import {motion} from "framer-motion";
 import MeInLaptop from "assets/characters/MeInLaptop";
 import React from "react";
-import useWindowSize from "helpers/use-window-size/useWindowSize";
+
+interface MeInLaptopInterface {
+  windowSize: number[]
+}
 
 const MeInLaptopBody = styled(motion.div)`
   display: flex;
@@ -12,11 +15,15 @@ const MeInLaptopBody = styled(motion.div)`
   @media only Screen and (max-width: 1024px) {
     margin-top: -60px;
   }
+
+  @media only Screen and (max-height: 600px) {
+    margin-top: -30px;
+  }
 `;
 
-const MeInLaptopContainer = () => {
-  const windowSize = useWindowSize()
-
+const MeInLaptopContainer = ({
+  windowSize
+}: MeInLaptopInterface) => {
   return (
   <MeInLaptopBody
     initial={{opacity: 0}}

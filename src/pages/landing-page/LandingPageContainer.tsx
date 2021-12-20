@@ -10,9 +10,10 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Work from "./components/work/Work";
 import BottomBar from "./components/bottom-bar/BottomBar";
 import IntroContent from "./components/intro-content/IntroContent";
+import useWindowSize from "helpers/use-window-size/useWindowSize";
 
 const LandingPageContainer = () => {
-
+  const windowSize = useWindowSize()
   return (
     <LandingPageBody>
       {/* ALL THE NAVIGATION ROUTE BUTTONS */}
@@ -30,7 +31,7 @@ const LandingPageContainer = () => {
         </CenterBoxDiv>
 
         <CenterBoxDiv>
-          <MeInLaptopContainer />
+          <MeInLaptopContainer windowSize={windowSize} />
         </CenterBoxDiv>
       </CenterBox>
     </LandingPageBody>
