@@ -11,27 +11,30 @@ import Work from "./components/work/Work";
 import BottomBar from "./components/bottom-bar/BottomBar";
 import IntroContent from "./components/intro-content/IntroContent";
 
-const LandingPageContainer = () => (
-  <LandingPageBody>
-    {/* ALL THE NAVIGATION ROUTE BUTTONS */}
-    <Logo />
-    <SocialIcons />
-    <ContactMe />
-    <Portfolio />
-    <Work />
-    <BottomBar />
+const LandingPageContainer = () => {
 
-    {/* CENTER BOX OF THE PORTFOLIO AND THE CHILDREN ARE ITS CONTENTS */}
-    <CenterBox>
-      <CenterBoxDiv>
-        <IntroContent />
-      </CenterBoxDiv>
+  return (
+    <LandingPageBody>
+      {/* ALL THE NAVIGATION ROUTE BUTTONS */}
+      <Logo />
+      <SocialIcons />
+      <ContactMe />
+      <Portfolio />
+      <Work />
+      <BottomBar />
 
-      <CenterBoxDiv>
-        <MeInLaptopContainer />
-      </CenterBoxDiv>
-    </CenterBox>
-  </LandingPageBody>
-);
+      {/* CENTER BOX OF THE PORTFOLIO AND THE CHILDREN ARE ITS CONTENTS */}
+      <CenterBox>
+        <CenterBoxDiv>
+          <IntroContent />
+        </CenterBoxDiv>
+
+        <CenterBoxDiv>
+          <MeInLaptopContainer />
+        </CenterBoxDiv>
+      </CenterBox>
+    </LandingPageBody>
+  );
+};
 
 export default LandingPageContainer;

@@ -8,7 +8,8 @@ const TextBody = styled(motion.div)`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 18rem;
   
   text {
     cursor: default;
@@ -17,6 +18,13 @@ const TextBody = styled(motion.div)`
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+
+  @media only Screen and (max-width: 1024px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 `;
 

@@ -14,6 +14,10 @@ const CenterBoxContainer = styled(motion.div)`
   display: flex;
   background: ${props => props.theme.body};
   border: 3px solid ${props => props.theme.text};
+  
+  @media only Screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const CenterBox = ({
