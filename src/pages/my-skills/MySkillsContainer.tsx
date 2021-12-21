@@ -10,16 +10,17 @@ import {LIGHT_THEME} from "configs/themes/ThemeConfig";
 
 const MySkillsContainer = () => (
   <MySkillsBody>
+    <ContentBody>
+      <SkillOne />
+    </ContentBody>
+
+    <ContentBody>
+      <SkillTwo />
+    </ContentBody>
+
     <Logo />
     <SocialIcons />
     <ParticleOne theme={LIGHT_THEME} />
-
-    <ContentBody>
-        <SkillOne />
-    </ContentBody>
-    <ContentBody>
-        <SkillTwo />
-    </ContentBody>
   </MySkillsBody>
 )
 

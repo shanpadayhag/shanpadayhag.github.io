@@ -19,6 +19,19 @@ const ContentBody = styled.div`
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
   }
+
+  @media only Screen and (max-width: 767px) {
+    width: 60vw;
+    margin-bottom: 2rem;
+  }
+
+  @media only Screen and (max-width: 430px) {
+    width: 50vw;
+  }
+
+  @media only Screen and (max-width: 340px) {
+    width: 40vw;
+  }
 `;
 
 export default ContentBody;
