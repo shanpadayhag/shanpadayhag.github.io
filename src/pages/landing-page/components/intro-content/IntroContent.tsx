@@ -1,6 +1,6 @@
+import React from "react";
 import styled from "styled-components";
 import {motion} from "framer-motion";
-import React from "react";
 
 const TextBody = styled(motion.div)`
   color: ${props => props.theme.text};

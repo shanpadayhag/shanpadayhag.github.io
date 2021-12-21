@@ -1,7 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import MeInLaptop from "assets/characters/MeInLaptop";
-import React from "react";
 
 interface MeInLaptopInterface {
   windowSize: number[]

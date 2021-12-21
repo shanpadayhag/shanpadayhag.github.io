@@ -18,7 +18,6 @@ const GlobalStyles = createGlobalStyle`
   }
   
   .disableSelect {
-    cursor: default;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
