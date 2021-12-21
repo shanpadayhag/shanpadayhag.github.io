@@ -129,7 +129,7 @@ const ParticleOne = ({
         }
       },
       "retina_detect": true,
-      "fpsLimit": 70
+      "fpsLimit": 120
     }} />
   </ParticleOneBody>
 )
