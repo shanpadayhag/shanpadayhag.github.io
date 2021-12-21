@@ -31,13 +31,13 @@ const ParticleOne = ({
           }
         },
         "color": {
-          "value": "#000000"
+          "value": theme === DARK_THEME ? darkTheme.text : lightTheme.text
         },
         "shape": {
           "type": "circle",
           "stroke": {
             "width": 0,
-            "color": "#000000"
+            "color": theme === DARK_THEME ? darkTheme.text : lightTheme.text
           },
           "polygon": {
             "nb_sides": 5
@@ -71,7 +71,7 @@ const ParticleOne = ({
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#000000",
+          "color": theme === DARK_THEME ? darkTheme.text : lightTheme.text,
           "opacity": 0.4,
           "width": 1
         },
@@ -128,7 +128,8 @@ const ParticleOne = ({
           }
         }
       },
-      "retina_detect": true
+      "retina_detect": true,
+      "fpsLimit": 70
     }} />
   </ParticleOneBody>
 )
