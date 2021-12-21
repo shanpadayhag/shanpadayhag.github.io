@@ -7,12 +7,12 @@ const SkillOne = () => (
   <>
     <MySkillTitle>
       <ApplicationCodeIcon size={40} />
-      App development
+      App Development
     </MySkillTitle>
 
     <MySkillDescription>
       Applications that can engage with clients
-      are very wonderful, and I enjoy developing them.
+      are fascinating, and I enjoy developing them.
     </MySkillDescription>
 
     <MySkillDescription>

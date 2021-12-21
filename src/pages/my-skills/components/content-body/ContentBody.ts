@@ -7,7 +7,7 @@ const ContentBody = styled.div`
   padding: 2rem;
   width: 30vw;
   height: 60vh;
-  z-index: 3;
+  z-index: 10;
   line-height: 1.5;
 
   font-family: 'Ubuntu Mono', monospace;
