@@ -53,9 +53,11 @@ const TextOne = styled(motion.text)`
 const TextTwo = styled(motion.text)`
   font-size: 50px;
   font-weight: bold;
+  padding-bottom: 5px;
 
   @media only Screen and (max-width: 767px) {
     font-size: 35px;
+    padding-bottom: 0;
   }
 
   @media only Screen and (max-width: 532px) {
