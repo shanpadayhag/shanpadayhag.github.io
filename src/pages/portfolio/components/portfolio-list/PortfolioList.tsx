@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import portfolioData from 'data/portfolio.json'
-import PortfolioItem from "../../../../components/portfolio-item/PortfolioItem";
+import PortfolioItem from "../portfolio-item/PortfolioItem";
 
 const PortfolioListBody =  styled.div`
   display: flex;

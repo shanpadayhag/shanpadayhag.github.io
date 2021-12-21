@@ -31,13 +31,13 @@ const ParticleOne = ({
           }
         },
         "color": {
-          "value": theme === DARK_THEME ? darkTheme.text : lightTheme.text
+          "value": "#000000"
         },
         "shape": {
           "type": "circle",
           "stroke": {
             "width": 0,
-            "color": theme === DARK_THEME ? darkTheme.body : lightTheme.body
+            "color": "#000000"
           },
           "polygon": {
             "nb_sides": 5
@@ -71,13 +71,13 @@ const ParticleOne = ({
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": theme === DARK_THEME ? darkTheme.text : lightTheme.text,
+          "color": "#000000",
           "opacity": 0.4,
           "width": 1
         },
         "move": {
           "enable": true,
-          "speed": 2,
+          "speed": 1,
           "direction": "none",
           "random": false,
           "straight": false,
@@ -85,7 +85,7 @@ const ParticleOne = ({
           "bounce": false,
           "attract": {
             "enable": false,
-            "rotateX": 600,
+            "rotateX": 1200,
             "rotateY": 1200
           }
         }
@@ -117,7 +117,7 @@ const ParticleOne = ({
             "opacity": 8,
           },
           "repulse": {
-            "distance": 200,
+            "distance": 150,
             "duration": 0.4
           },
           "push": {
@@ -129,8 +129,7 @@ const ParticleOne = ({
         }
       },
       "retina_detect": true
-    }
-    } />
+    }} />
   </ParticleOneBody>
 )
 

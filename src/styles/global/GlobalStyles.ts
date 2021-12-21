@@ -24,6 +24,16 @@ const GlobalStyles = createGlobalStyle`
     -ms-user-select: none;
     user-select: none;
   }
+  
+  .disableSelectText {
+    text, h1, h2, h3, h4, h5, h6, span, strong, ul, p {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
 `;
 
 export default GlobalStyles;

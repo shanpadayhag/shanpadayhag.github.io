@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ContentBody from "../content-body/ContentBody";
 
-const MySkillDescription = styled.div`
+const MySkillDescription = styled.text`
   color: ${props => props.theme.text};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;

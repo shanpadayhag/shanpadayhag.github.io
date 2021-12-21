@@ -9,7 +9,7 @@ import ParticleOne from "components/particles/particle-one/ParticleOne";
 import {LIGHT_THEME} from "configs/themes/ThemeConfig";
 
 const MySkillsContainer = () => (
-  <MySkillsBody>
+  <MySkillsBody className={"disableSelectText"}>
     <ContentBody>
       <SkillOne />
     </ContentBody>
