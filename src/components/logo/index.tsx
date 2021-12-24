@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {NavLink} from "react-router-dom";
 
 const LogoText = styled.h1`
   display: inline-block;
@@ -25,9 +26,11 @@ const LogoText = styled.h1`
 
 const Logo = () => {
   return (
-    <LogoText className={'disableSelect'}>
-      LOGO
-    </LogoText>
+    <NavLink to={'/portfolio'}>
+      <LogoText className={'disableSelect'}>
+        LOGO
+      </LogoText>
+    </NavLink>
   )
 }
 
