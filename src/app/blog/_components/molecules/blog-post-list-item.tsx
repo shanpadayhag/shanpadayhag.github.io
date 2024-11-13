@@ -33,7 +33,7 @@ const BlogPostListItem = (props: BlogPostListItemProps) => (
             <div className="flex flex-wrap gap-2"></div>
 
             <Link href={props.link} className='block'>
-                <p className="article-excerpt text-lg font-normal text-secondary-600">
+                <p className="article-excerpt text-base font-normal text-secondary-600">
                     {props.description}
                 </p>
             </Link>

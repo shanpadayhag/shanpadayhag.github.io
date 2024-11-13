@@ -13,12 +13,12 @@ const BlogPostContainer = (props: BlogPostContainerProps) => (
     <div className=" w-full">
         <div className="space-y-1 text-left pb-8">
             <div className="col-span-2 pb-6 block">
-                <Link href="/blog">← Back</Link>
+                <Link href="/blog" className='text-base'>← Back</Link>
             </div>
 
             <dl className="space-y-10">
                 <div>
-                    <dt className="text-mineshaft-300">Blog post <span className="text-mineshaft-300"> • {props.durationToRead} read</span></dt>
+                    <dt className="text-mineshaft-300 text-base">Blog post <span className="text-mineshaft-300"> • {props.durationToRead} read</span></dt>
                 </div>
             </dl>
 
@@ -33,7 +33,10 @@ const BlogPostContainer = (props: BlogPostContainerProps) => (
                     <dt className="sr-only">Published on</dt>
                     <dd className="mb-4 text-base leading-6 text-mineshaft-300">
                         <time dateTime={dateUtil.toDateSortableFormat(props.publishDate)}>
-                            {dateUtil.toBlogPostItemDatetimeFormat(props.publishDate)}
+                            {dateUtil.toBlogPostItemDatetimeFormat(props.publishDate, {
+                                includeDay: true,
+                                completeMonth: true,
+                            })}
                         </time>
                     </dd>
                 </div>
