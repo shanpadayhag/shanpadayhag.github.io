@@ -5,8 +5,21 @@ const dateUtil = {
         return datefns.format(date, 'yyyy-MM-dd');
     },
 
-    toBlogPostItemDatetimeFormat(date: Date) {
-        return datefns.format(date, 'MMM dd, yyyy');
+    toBlogPostItemDatetimeFormat(date: Date, options?: {
+        includeDay?: boolean;
+        completeMonth?: boolean;
+    }) {
+        let format = '';
+
+        if (options?.includeDay)
+            format += 'EEEE, ';
+        if (options?.completeMonth)
+            format += 'MMMM ';
+        else
+            format += 'MMM ';
+        format += 'dd, yyyy';
+
+        return datefns.format(date, format);
     }
 };
 
