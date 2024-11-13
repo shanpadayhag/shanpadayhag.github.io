@@ -33,7 +33,10 @@ const BlogPostContainer = (props: BlogPostContainerProps) => (
                     <dt className="sr-only">Published on</dt>
                     <dd className="mb-4 text-base leading-6 text-mineshaft-300">
                         <time dateTime={dateUtil.toDateSortableFormat(props.publishDate)}>
-                            {dateUtil.toBlogPostItemDatetimeFormat(props.publishDate)}
+                            {dateUtil.toBlogPostItemDatetimeFormat(props.publishDate, {
+                                includeDay: true,
+                                completeMonth: true,
+                            })}
                         </time>
                     </dd>
                 </div>
