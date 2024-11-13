@@ -12,7 +12,7 @@ export default () => {
     return (
         <section>
             <BlurFade delay={env.delay}>
-                <h1 className="whitespace-pre-wrap text-4xl font-bold text-secondary-900 sm:text-5xl lg:text-6xl">Shan Blog</h1>
+                <h1 className="whitespace-pre-wrap text-4xl font-bold text-secondary-900 sm:text-5xl lg:text-6xl">Shan's Blog</h1>
                 <h2 className="whitespace-pre-wrap text-xl font-normal text-secondary-600 mt-4">Where I share my journey, insights, and tips on software development, full-stack engineering, and emerging tech trends</h2>
             </BlurFade>
 

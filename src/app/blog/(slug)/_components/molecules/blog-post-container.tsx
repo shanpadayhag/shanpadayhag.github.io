@@ -13,12 +13,12 @@ const BlogPostContainer = (props: BlogPostContainerProps) => (
     <div className=" w-full">
         <div className="space-y-1 text-left pb-8">
             <div className="col-span-2 pb-6 block">
-                <Link href="/blog">← Back</Link>
+                <Link href="/blog" className='text-base'>← Back</Link>
             </div>
 
             <dl className="space-y-10">
                 <div>
-                    <dt className="text-mineshaft-300">Blog post <span className="text-mineshaft-300"> • {props.durationToRead} read</span></dt>
+                    <dt className="text-mineshaft-300 text-base">Blog post <span className="text-mineshaft-300"> • {props.durationToRead} read</span></dt>
                 </div>
             </dl>
 
