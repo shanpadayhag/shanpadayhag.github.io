@@ -13,39 +13,15 @@ const env = {
     ],
     workExperiences: [
         {
-            company: "Prowess Property Management Inc.",
-            href: "https://prowessproperty.ca",
-            badges: [],
-            location: "Contract",
-            title: "Freelance Developer",
-            logoUrl: "data:image/jpeg;base64,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",
-            start: "June 2024",
-            end: "September 2024",
-            description:
-                "Developed a companion system for Prowess Property to enable partners to access and view relevant data, reducing the need for manual reporting. Designed with user-friendly interfaces and secure data access, the system streamlined data-sharing processes, enhancing transparency and improving collaboration with partners. This addition complemented the initial system, creating an integrated solution to support both internal operations and external partnerships.",
-        },
-        {
             company: "Mabizza IT Solutions",
             badges: [],
             location: "Remote",
             title: "Software Engineer",
             logoUrl: "/atomic.png",
-            start: "December 2023",
+            start: "September 2022",
             end: "July 2024",
             description:
-                "Returned to Mabizza IT Solutions as a Software Engineer after a 4-month OJT break, resuming work on ongoing projects and contributing to new initiatives. Leveraged prior experience to quickly reintegrate with the team, ensuring continuity and maintaining high standards in software development and maintenance. Focused on delivering efficient solutions and supporting team goals with renewed insights gained during the OJT experience.",
-        },
-        {
-            company: "Prowess Property Management Inc.",
-            href: "https://prowessproperty.ca",
-            badges: [],
-            location: "Contract",
-            title: "Freelance Developer",
-            logoUrl: "data:image/jpeg;base64,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",
-            start: "May 2023",
-            end: "February 2024",
-            description:
-                "Developed a custom system to streamline and enhance operational processes for Prowess Property. Collaborated with stakeholders to understand business requirements and translated them into functional software solutions. Implemented efficient workflows to improve productivity and support business objectives.",
+                "Following the rebranding of Whitelide Solutions, I continued as Lead Developer at Mabizza IT Solutions, working on enterprise-level software solutions. I collaborated with senior engineers on a lottery management system for a government client, further honing my skills in back-end development, cloud infrastructure, and system optimization.",
         },
         {
             company: "CyTech International",
@@ -57,18 +33,7 @@ const env = {
             start: "August 2023",
             end: "November 2023",
             description:
-                "Developed a custom system to streamline and enhance operational processes for Prowess Property. Collaborated with stakeholders to understand business requirements and translated them into functional software solutions. Implemented efficient workflows to improve productivity and support business objectives.",
-        },
-        {
-            company: "Mabizza IT Solutions",
-            badges: [],
-            location: "Remote",
-            title: "Software Engineer",
-            logoUrl: "/atomic.png",
-            start: "September 2022",
-            end: "August 2023",
-            description:
-                "Contributed to the development and maintenance of applications using React, Git, and SQL, collaborating with cross-functional teams to design and deliver solutions that met user needs. Played a key role in application development and maintenance. Worked closely with teams to analyze user needs and design, test, and develop software solutions.",
+                "During my internship at CyTech International, I worked as a Tier 1 CSOC Analyst, where I monitored cybersecurity threats and executed incident response protocols. I expanded my skill set with hands-on experience in network security and performed Android mobile penetration testing, beyond the scope of my primary role.",
         },
         {
             company: "Whitelide Solutions",
@@ -78,7 +43,7 @@ const env = {
             start: "May 2021",
             end: "September 2022",
             description:
-                "Led a team in developing software solutions using TypeScript and PHP, overseeing the entire development lifecycle to ensure timely and budget-compliant delivery. Established coding standards and optimized development processes to enhance code quality and maintainability. Mentored junior developers to foster team growth and boost productivity.",
+                "At Whitelide Solutions, I led full-stack development efforts in a dynamic startup environment, building scalable web and mobile applications. I gained expertise in software engineering, database management, DevOps, and system architecture, while enhancing team workflows and contributing to product development across various projects.",
         },
     ],
     education: [
