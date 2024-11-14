@@ -21,7 +21,7 @@ const env = {
             start: "September 2022",
             end: "July 2024",
             description:
-                "Following the rebranding of Whitelide Solutions, I continued as Lead Developer at Mabizza IT Solutions, working on enterprise-level software solutions. I collaborated with senior engineers on a lottery management system for a government client, further honing my skills in back-end development, cloud infrastructure, and system optimization.",
+                "At Mabizza IT Solutions, which rebranded from Whitelide Solutions, I transitioned to the role of Software Engineer. With a larger team of senior software engineers and front-end developers, I've had the opportunity to enhance my skills by learning from experienced colleagues. I’m currently working on an enterprise-level lottery management system for the government-backed Small Town Lottery (STL) operation, further improving my back-end development and system optimization abilities.",
         },
         {
             company: "CyTech International",
