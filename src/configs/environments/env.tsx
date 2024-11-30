@@ -86,11 +86,11 @@ const env = {
             links: [
                 {
                     type: "Website",
-                    href: 'https://test.attywsm.com',
+                    href: 'https://attywsm.com',
                     icon: <Globe className="size-3" />,
                 },
             ],
-            href: 'https://test.attywsm.com',
+            href: 'https://attywsm.com',
             image: "https://lh3.googleusercontent.com/d/1xuUmW7jAHd3IgxCX95cJ2OlI4_cQnxqG",
         },
         {
