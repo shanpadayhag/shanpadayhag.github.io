@@ -16,11 +16,14 @@ export default () => {
                 <h2 className="whitespace-pre-wrap text-xl font-normal text-secondary-600 mt-4">Where I share my journey, insights, and tips on software development, full-stack engineering, and emerging tech trends</h2>
             </BlurFade>
 
-            {/* <BlurFade delay={env.delay * 2 + 1 * 0.05}>
+            <BlurFade delay={env.delay * 2 + 1 * 0.05}>
                 <BlogPostListItem
-                    link="/blog/my-journey-to-becoming-a-software-engineer" />
-                <Separator />
-            </BlurFade> */}
+                    link="/blog/learning-nextjs-and-typescript"
+                    datetime={new Date("2024-11-30")}
+                    title='Learning Next.js and TypeScript: My Experience'
+                    image='https://lh3.googleusercontent.com/d/16v6K7zA2st_agai6j8vePrKTuc4Zg_P8'
+                    description="Dive into my Next.js learning journey! Discover my challenges, key takeaways, and valuable resources. Get insights into building scalable projects, optimizing SEO, and refining development skills." />
+            </BlurFade>
 
             <BlurFade delay={env.delay * 2 + 1 * 0.05}>
                 <BlogPostListItem

@@ -1,6 +1,10 @@
 import BlogPostContainer from '@/app/blog/(slug)/_components/molecules/blog-post-container';
 import Image from 'next/image';
 
+export const metadata = {
+    title: 'My Journey to Becoming a Software Engineer'
+};
+
 export default () => {
     return (
         <BlogPostContainer
