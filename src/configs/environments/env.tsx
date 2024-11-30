@@ -70,6 +70,30 @@ const env = {
     ],
     projects: [
         {
+            title: "Hotel Management System",
+            dates: "Sep 2024 - Present",
+            active: true,
+            description:
+                "A comprehensive hotel management system designed to streamline operations, covering front-desk operations, reservations, room assignments, guest information and billing processes. Additionally, it features an integrated Point of Sale (POS) system for managing restaurant transactions, providing a seamless experience for guests and hotel staff.",
+            technologies: [
+                "Laravel 11",
+                "PHP 8.3",
+                "MySQL",
+                "Next.js",
+                "TypeScript",
+                "TailwindCSS",
+            ],
+            links: [
+                {
+                    type: "Website",
+                    href: 'https://test.attywsm.com',
+                    icon: <Globe className="size-3" />,
+                },
+            ],
+            href: 'https://test.attywsm.com',
+            image: "https://lh3.googleusercontent.com/d/1xuUmW7jAHd3IgxCX95cJ2OlI4_cQnxqG",
+        },
+        {
             title: "Prowess Homeowner Portal",
             dates: "Jun 2024 - Sep 2024",
             active: true,
