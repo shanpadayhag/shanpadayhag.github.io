@@ -22,7 +22,7 @@ export default () => {
                     datetime={new Date("2024-11-30")}
                     title='Learning Next.js and TypeScript: My Experience'
                     image='https://lh3.googleusercontent.com/d/16v6K7zA2st_agai6j8vePrKTuc4Zg_P8'
-                    description="Dive into my Next.js learning journey! Discover my challenges, key takeaways, and valuable resources. Get insights into building scalable projects, optimizing SEO, and refining development skills." />
+                    description="Dive into my experience mastering Next.js and TypeScript, showcasing expertise in SEO optimization, clean coding, and robust application development." />
             </BlurFade>
 
             <BlurFade delay={env.delay * 2 + 1 * 0.05}>
