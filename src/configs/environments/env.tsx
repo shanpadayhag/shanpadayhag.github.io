@@ -70,6 +70,21 @@ const env = {
     ],
     projects: [
         {
+            title: "Eventify",
+            dates: "Sep 2024 - Present",
+            active: true,
+            description:
+                "Eventify is a comprehensive event management system developed using Angular for its robust framework and Tailwind CSS for its modern and responsive design capabilities. This project is structured to offer modularity and scalability, making it easy for developers to customize and expand its features.",
+            technologies: [
+                "AngularJS 19",
+                "Spring Boot 3.4.0",
+                "MySQL",
+                "TailwindCSS",
+            ],
+            links: [],
+            image: "https://lh3.googleusercontent.com/d/1n3B5juAweYuvLmmQIOhr1anIoLhIxT24",
+        },
+        {
             title: "Hotel Management System",
             dates: "Sep 2024 - Present",
             active: true,
