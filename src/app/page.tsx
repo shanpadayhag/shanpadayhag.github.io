@@ -147,7 +147,7 @@ export default function Home() {
               >
                 <ProjectCard
                   key={project.title}
-                  // href={project.href}
+                  href={project.href}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
