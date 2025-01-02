@@ -167,12 +167,7 @@ const env = {
                 "TypeScript",
                 "Ionic 7",
             ],
-            links: [
-                {
-                    type: "Mobile App",
-                    icon: <Smartphone className="size-3" />,
-                },
-            ],
+            links: [],
             image: "https://lh3.googleusercontent.com/d/1PkqyWxfsJJ2vfmbohVa52q8KuTOJQxv6",
         },
         {
@@ -190,12 +185,7 @@ const env = {
                 "Redis",
                 "Docker",
             ],
-            links: [
-                {
-                    type: "Website",
-                    icon: <Globe className="size-3" />,
-                },
-            ],
+            links: [],
             image: "https://lh3.googleusercontent.com/d/1nLDlzJtWZ7iKOCLhYth6o-8f9Iz8UeAA",
         },
         {
@@ -210,12 +200,7 @@ const env = {
                 "MySQL",
                 "Redis",
             ],
-            links: [
-                {
-                    type: "Website",
-                    icon: <Globe className="size-3" />,
-                },
-            ],
+            links: [],
             image: "https://lh3.googleusercontent.com/d/1m0QOIRoyXDcrYzgu1rJcigLM5XZVs2vX",
         },
         {
@@ -228,12 +213,7 @@ const env = {
                 "React Native",
                 "TypeScript",
             ],
-            links: [
-                {
-                    type: "Mobile App",
-                    icon: <Smartphone className="size-3" />,
-                },
-            ],
+            links: [],
             image: "https://lh3.googleusercontent.com/d/1GmaXysqMDaVAPfEfAbvvVFN9tZzXp5yw",
         },
     ],
