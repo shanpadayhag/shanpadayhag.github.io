@@ -38,7 +38,7 @@ export default function Home() {
         </BlurFade>
         <BlurFade delay={env.delay * 4}>
           <p>
-            In 2024, I completed my Master’s in Computer Science while balancing
+            In 2024, I completed my Bachelor’s degree in Computer Science while balancing
             a full-time role as a software engineer. Over the past few years,
             I’ve focused on building my technical skills in real-world settings
             rather than traditional academics, honing my expertise in
