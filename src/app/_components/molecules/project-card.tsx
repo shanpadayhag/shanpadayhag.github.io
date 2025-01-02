@@ -41,7 +41,7 @@ export function ProjectCard({
 }: Props) {
     return (
         <Card className={"flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"}>
-            <Link href={href || "#"}
+            <Link href={href || "#"} style={{ pointerEvents: href ? "auto" : "none" }}
                 className={cn("block", href && 'cursor-pointer', className)}>
                 {video ? (
                     <video src={video} autoPlay loop muted playsInline
@@ -85,7 +85,7 @@ export function ProjectCard({
                 {links && links.length > 0 && (
                     <div className="flex flex-row flex-wrap items-start gap-1">
                         {links?.map((link, idx) => (
-                            <Link href={link?.href ?? '#'} key={idx} target="_blank">
+                            <Link href={link?.href ?? '#'} style={{ pointerEvents: link?.href ? "auto" : "none" }} key={idx} target="_blank">
                                 <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
                                     {link.icon}
                                     {link.type}
