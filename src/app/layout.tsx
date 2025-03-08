@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: 'https://lh3.googleusercontent.com/d/1cTAzejGboBmxZ8zArLPaYIvsEY8Zf2NA',
+        url: 'https://lh3.googleusercontent.com/d/1t3_MTe0UIhX392JwzF8k-SFpQpPQjcI5',
         width: 1200,
         height: 630,
         alt: 'Shan Padayhag Portfolio',
