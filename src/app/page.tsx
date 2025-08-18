@@ -19,7 +19,7 @@ export default function Home() {
                 text={`Hi, I'm ${env.name.split(" ")[0]} 👋`} />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl" delay={env.delay}
-                text="All-rounder developer adept with both front-end and back-end, boasting a significant involvement in projects as lead developer. Typescript, JavaScript, PHP, Python, Java, Dart--name it, I can do it." />
+                text="I build high-performance, scalable backend systems using Java, Spring Boot, and AWS. My focus is on system optimization, microservices architecture, and writing clean, test-driven code." />
             </div>
 
             <BlurFade>
@@ -36,22 +36,17 @@ export default function Home() {
         <BlurFade delay={env.delay * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
-        <BlurFade delay={env.delay * 4}>
+        <BlurFade delay={env.delay * 4} className="grid gap-4">
           <p>
-            In 2024, I completed my Bachelor’s degree in Computer Science while balancing
-            a full-time role as a software engineer. Over the past few years,
-            I’ve focused on building my technical skills in real-world settings
-            rather than traditional academics, honing my expertise in
-            TypeScript, PHP, and React through hands-on projects. I’ve worked as
-            a lead developer, interned in cybersecurity, and collaborated with
-            cross-functional teams to deliver high-quality solutions.
+            In 2024, I completed my Computer Science degree while working full-time as a software engineer. This allowed me to immediately apply academic concepts to solve real-world backend challenges.
           </p>
 
-          <p className='mt-4'>
-            Outside of work, you’ll find me at the table tennis court, where I
-            exercise both body and mind. It’s my go-to activity to recharge and
-            find fresh perspectives, which I bring back to my work with renewed
-            focus.
+          <p>
+            At Mabizza IT Solutions, I architected a system that boosted API response times by 90% and cut server costs by 10%. As a lead developer at Whitelide, I mentored my team on SOLID principles and TDD to improve code quality and velocity. My work is grounded in creating resilient, efficient, and secure backend infrastructure.
+          </p>
+
+          <p>
+            Outside of work, I play table tennis to recharge and sharpen my focus—a skill I bring back to every engineering problem I solve.
           </p>
         </BlurFade>
       </section>
