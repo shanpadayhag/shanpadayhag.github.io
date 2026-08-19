@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const work = [
   {
     role: "Software Engineer",
@@ -36,7 +38,7 @@ export default function Home() {
     <main>
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Shan Padayhag, home">
-          <img src="/icon.svg" alt="" width="32" height="32" />
+          <Image src="/icon.svg" alt="" width={32} height={32} />
           <span>Shan Padayhag</span>
         </a>
         <div className="nav-links">
