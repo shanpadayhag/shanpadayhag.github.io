@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local AI working notes — never commit these artifacts.
+AGENT.md
+AGENTS.md
+PRODUCT.md
+AI-*.md
+*.ai.md
+.ai/
+.codex/
