@@ -36,7 +36,8 @@ export default function Home() {
     <main>
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Shan Padayhag, home">
-          SP<span>_</span>
+          <img src="/icon.svg" alt="" width="32" height="32" />
+          <span>Shan Padayhag</span>
         </a>
         <div className="nav-links">
           <a href="#work">Work</a>

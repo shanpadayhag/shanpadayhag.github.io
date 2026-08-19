@@ -59,13 +59,18 @@ footer {
   border-bottom: 1px solid var(--line);
 }
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 1.05rem;
+  font-size: 0.78rem;
   font-weight: 650;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
 }
-.wordmark span {
-  color: var(--signal);
+.wordmark img {
+  width: 2rem;
+  height: 2rem;
 }
 .nav-links {
   display: flex;
