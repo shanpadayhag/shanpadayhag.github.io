@@ -59,7 +59,8 @@ export default function Home() {
           <p className="hero-summary">
             I turn slow, calculation-heavy software into reliable, maintainable
             systems. My work sits where backend performance, practical product
-            engineering, and technical judgment meet.
+            engineering, and technical judgment meet. Recently, I have been
+            drawn toward Rust for backend work.
           </p>
           <a className="text-link" href="#projects">
             See selected work <span aria-hidden="true">→</span>
@@ -120,7 +121,8 @@ export default function Home() {
           <p>
             Built to practice the parts of engineering I care about: correct
             data models, useful offline behavior, and tests that protect the
-            hard edges.
+            hard edges. I reach for Next.js when the experience is design-led,
+            and vanilla JavaScript or SolidJS when efficiency matters most.
           </p>
         </div>
         <div className="project-list">
@@ -146,7 +148,8 @@ export default function Home() {
       </section>
       <section className="closing" aria-labelledby="closing-title">
         <p>
-          Currently deepening Rust while building a public systems showcase.
+          Currently deepening Rust for backend systems and sharpening the
+          frontend choices that keep interfaces useful and fast.
         </p>
         <h2 id="closing-title">
           Looking for the next hard thing to make measurably better.
