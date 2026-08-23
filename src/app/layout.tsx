@@ -7,9 +7,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "Shan Padayhag — Software Engineer",
+  title: "Shan Padayhag — Versatile Software Engineer",
   description:
-    "A performance-minded software engineer focused on reliable systems and practical product engineering.",
+    "A versatile software engineer focused on reliable systems, practical product engineering, and Rust-leaning backend work.",
   icons: {
     icon: "/icon.svg",
   },

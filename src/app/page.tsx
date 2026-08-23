@@ -13,7 +13,7 @@ const work = [
     company: "Whitelide",
     period: "May 2021 — Sep 2022",
     detail:
-      "Provided technical direction for a small delivery team while building with Laravel, React, TypeScript, MySQL, CI/CD and Ubuntu.",
+      "Provided technical direction for a small delivery team while building with PHP, React, TypeScript, MySQL, CI/CD and Ubuntu.",
   },
 ];
 const projects = [
@@ -49,18 +49,18 @@ export default function Home() {
       </nav>
       <section className="hero" id="top" aria-labelledby="hero-title">
         <p className="availability">
-          Available for thoughtful engineering teams
+          Available for backend, full-stack, and systems work
         </p>
         <h1 id="hero-title">
           Shan Padayhag
-          <span>Software engineer for systems that need to move faster.</span>
+          <span>Versatile software engineer who can move across the stack.</span>
         </h1>
         <div className="hero-bottom">
           <p className="hero-summary">
-            I turn slow, calculation-heavy software into reliable, maintainable
-            systems. My work sits where backend performance, practical product
-            engineering, and technical judgment meet. Recently, I have been
-            drawn toward Rust for backend work.
+            I build reliable software across backend, frontend, data, and
+            production operations. My strongest work is in performance-minded
+            systems, and I’m currently leaning into Rust for new backend work
+            while staying comfortable in PHP, TypeScript, and React ecosystems.
           </p>
           <a className="text-link" href="#projects">
             See selected work <span aria-hidden="true">→</span>
@@ -92,7 +92,7 @@ export default function Home() {
         aria-labelledby="work-title"
       >
         <div className="section-heading">
-          <h2 id="work-title">Work shaped by constraints, not buzzwords.</h2>
+          <h2 id="work-title">Work across the stack, grounded in systems thinking.</h2>
           <p>
             Experience across product maintenance, performance improvements,
             technical direction, testing, delivery, and production operations.
@@ -119,10 +119,10 @@ export default function Home() {
         <div className="section-heading">
           <h2 id="projects-title">Source-verified personal projects.</h2>
           <p>
-            Built to practice the parts of engineering I care about: correct
-            data models, useful offline behavior, and tests that protect the
-            hard edges. I reach for Next.js when the experience is design-led,
-            and vanilla JavaScript or SolidJS when efficiency matters most.
+            Built to show range: correct data models, useful offline behavior,
+            and tests that protect the hard edges. I reach for Next.js when the
+            experience is design-led, and vanilla JavaScript or SolidJS when
+            efficiency matters most.
           </p>
         </div>
         <div className="project-list">
@@ -148,8 +148,8 @@ export default function Home() {
       </section>
       <section className="closing" aria-labelledby="closing-title">
         <p>
-          Currently deepening Rust for backend systems and sharpening the
-          frontend choices that keep interfaces useful and fast.
+          Currently leaning into Rust for backend systems while keeping the
+          frontend choices that make interfaces useful and fast.
         </p>
         <h2 id="closing-title">
           Looking for the next hard thing to make measurably better.
