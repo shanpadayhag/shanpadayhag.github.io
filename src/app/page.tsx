@@ -18,6 +18,13 @@ const work = [
 ];
 const projects = [
   {
+    name: "Showcase Authentication Service",
+    stack: "Rust · Axum · AWS Lambda · PostgreSQL · sqlx · OpenAPI",
+    description:
+      "A production-shaped authentication vertical slice: Argon2id password hashing, email verification, JWT access tokens, revocable opaque refresh tokens, contract-first APIs, and end-to-end tests.",
+    href: "https://github.com/shanpadayhag/showcase-auth-service",
+  },
+  {
     name: "Savings Tracker",
     stack: "Next.js · React · TypeScript · IndexedDB",
     description:
