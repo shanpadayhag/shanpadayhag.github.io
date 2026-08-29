@@ -6,14 +6,14 @@ const work = [
     company: "Mabizza IT Solutions",
     period: "Sep 2022 — Jul 2024",
     detail:
-      "Maintained and improved a calculation-heavy client application with PHP, TypeScript, React, MySQL, Redis, AWS and Ubuntu.",
+      "Primarily optimized slow existing production features in a calculation-heavy Laravel web and mobile application, while continuing to deliver across the full stack.",
   },
   {
     role: "Lead Developer",
     company: "Whitelide",
     period: "May 2021 — Sep 2022",
     detail:
-      "Provided technical direction for a small delivery team while building with PHP, React, TypeScript, MySQL, CI/CD and Ubuntu.",
+      "Provided technical direction for a small delivery team while building Laravel backend services and frontend features for web and mobile applications.",
   },
 ];
 const projects = [
@@ -66,8 +66,8 @@ export default function Home() {
           <p className="hero-summary">
             I build reliable software across backend, frontend, data, and
             production operations. My strongest work is in performance-minded
-            systems, and I’m currently leaning into Rust for new backend work
-            while staying comfortable in PHP, TypeScript, and React ecosystems.
+            systems, and I’m learning Rust to broaden my engineering toolkit
+            while continuing to build across TypeScript and React ecosystems.
           </p>
           <a className="text-link" href="#projects">
             See selected work <span aria-hidden="true">→</span>
@@ -124,12 +124,11 @@ export default function Home() {
         aria-labelledby="projects-title"
       >
         <div className="section-heading">
-          <h2 id="projects-title">Source-verified personal projects.</h2>
+          <h2 id="projects-title">Selected personal projects.</h2>
           <p>
-            Built to show range: correct data models, useful offline behavior,
-            and tests that protect the hard edges. I reach for Next.js when the
-            experience is design-led, and vanilla JavaScript or SolidJS when
-            efficiency matters most.
+            Work that makes the engineering decisions visible: authentication
+            boundaries, data models, offline behavior, and tests that protect
+            the hard edges.
           </p>
         </div>
         <div className="project-list">
@@ -157,6 +156,13 @@ export default function Home() {
         <p>
           Currently leaning into Rust for backend systems while keeping the
           frontend choices that make interfaces useful and fast.
+        </p>
+        <p>
+          I plan the work before I write it — thinking through what&rsquo;s
+          needed, shaping the approach, and breaking it into clear steps — then
+          build to a consistent, tested engineering standard. AI tooling speeds
+          up the implementation; the thinking, standards, review, and tests stay
+          mine, and every line I ship is one I can explain and defend.
         </p>
         <h2 id="closing-title">
           Looking for the next hard thing to make measurably better.
