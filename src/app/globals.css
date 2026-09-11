@@ -1,12 +1,24 @@
+html { color-scheme: light; }
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #eeefeb;
+  --muted: #b4bdb6;
+  --quiet: #a6afa8;
+  --surface: #181c1b;
+  --surface-raised: #29312d;
+  --line: #424c45;
+  --signal: #d8a281;
+  --signal-ink: #181c1b;
+}
 :root {
-  --ink: #f4f0e8;
-  --muted: #b5ad9f;
-  --quiet: #79736a;
-  --surface: #131313;
-  --surface-raised: #1c1c1b;
-  --line: #373630;
-  --signal: #e5aa52;
-  --signal-ink: #18120a;
+  --ink: #20221f;
+  --muted: #5b6058;
+  --quiet: #64695f;
+  --surface: #eeefeb;
+  --surface-raised: #e1e5db;
+  --line: #cfd3ca;
+  --signal: #914426;
+  --signal-ink: #ffffff;
 }
 * {
   box-sizing: border-box;
@@ -326,8 +338,8 @@ footer {
 .back-link span,.post-preview-action span { color: var(--signal); }
 .back-link span { margin-left: 0.25rem; }
 .post-list { padding-bottom: clamp(8rem, 14vw, 12rem); border-top: 1px solid var(--line); }
-.post-preview { display: grid; grid-template-columns: 160px 1fr auto; gap: 2rem; align-items: start; padding: 2.4rem 0; border-bottom: 1px solid var(--line); transition: background 0.2s ease, padding 0.2s ease; }
-.post-preview:hover { background: var(--surface-raised); padding-inline: 1rem; }
+.post-preview { display: grid; grid-template-columns: 160px 1fr auto; gap: 2rem; align-items: start; padding: 2.4rem 0; border-bottom: 1px solid var(--line); transition: background 0.2s ease; }
+.post-preview:hover { background: var(--surface-raised); }
 .post-preview-meta { display: grid; gap: 0.55rem; color: var(--quiet); font-family: var(--font-geist-mono), monospace; font-size: 0.68rem; line-height: 1.45; letter-spacing: 0.04em; text-transform: uppercase; }
 .post-preview-content h2 { max-width: 16ch; margin-top: 0.75rem; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 0.97; }
 .post-preview-content > p:last-child { max-width: 55ch; margin-top: 1.35rem; color: var(--muted); line-height: 1.6; }
@@ -398,7 +410,6 @@ footer {
   }
   .notes-intro,.post-list,.article { width: min(100% - 32px, 920px); }
   .post-preview { grid-template-columns: 1fr; gap: 1.4rem; }
-  .post-preview:hover { padding-inline: 0.7rem; }
   .post-preview-action { padding-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
