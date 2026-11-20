@@ -1,4 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/core/class-names";
 import {
   portfolioContent,
@@ -74,6 +75,16 @@ export default function ProjectCard({ project, isFeatured }: ProjectCardProps) {
                 <ArrowUpRight aria-hidden="true" className="size-4" />
               </a>
             ))}
+            {project.noteHref && (
+              <Link
+                href={project.noteHref}
+                className="text-primary inline-flex w-fit items-center gap-1.5 font-medium underline-offset-4 hover:underline"
+              >
+                {portfolioContent.projectNoteAction}
+                <span className="sr-only">: {project.name}</span>
+                <ArrowRight aria-hidden="true" className="size-4" />
+              </Link>
+            )}
           </div>
         </div>
       </div>

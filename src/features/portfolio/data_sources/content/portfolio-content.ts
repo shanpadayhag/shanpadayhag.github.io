@@ -27,6 +27,7 @@ export const portfolioContent = {
   selectedIntroduction:
     "Personal projects that put the hard parts first: trust, data integrity, and software that works offline.",
   projectSourceAction: "Explore source",
+  projectNoteAction: "Read the note",
   projects: [
     {
       name: "DaiBX",
@@ -55,6 +56,7 @@ export const portfolioContent = {
         },
         { label: "Visit the app", href: "https://dai-bx.vercel.app/" },
       ],
+      noteHref: "/blog/checking-daibx-against-asvs/",
     },
     {
       name: "Showcase Authentication Service",
@@ -74,6 +76,7 @@ export const portfolioContent = {
       description:
         "A production-shaped authentication vertical slice: Argon2id password hashing, email verification, JWT access tokens, revocable opaque refresh tokens, a contract-first API, and integration tests that run the whole sign-in flow against PostgreSQL.",
       href: "https://github.com/shanpadayhag/showcase-auth-service",
+      noteHref: "/blog/refresh-tokens-you-can-take-back/",
     },
     {
       name: "Savings Tracker",
