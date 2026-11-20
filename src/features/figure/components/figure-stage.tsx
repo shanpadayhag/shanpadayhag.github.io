@@ -4,6 +4,9 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { cn } from "@/core/class-names";
 
+const canvasSettleDelayMilliseconds = 2500;
+const canvasIdleTimeoutMilliseconds = 2000;
+
 const FigureCanvas = dynamic(
   () => import("@/features/figure/components/figure-canvas"),
   { ssr: false },
@@ -11,22 +14,44 @@ const FigureCanvas = dynamic(
 
 type FigureStageProps = {
   caption: string;
+  description: string;
 };
 
-export default function FigureStage({ caption }: FigureStageProps) {
+export default function FigureStage({
+  caption,
+  description,
+}: FigureStageProps) {
   const [isCanvasRequested, setIsCanvasRequested] = useState(false);
   const [isCanvasReady, setIsCanvasReady] = useState(false);
 
   useEffect(() => {
+    let settleTimeoutHandle: ReturnType<typeof setTimeout> | undefined;
+    let idleHandle: number | undefined;
     const requestCanvas = () => setIsCanvasRequested(true);
-    if ("requestIdleCallback" in window) {
-      const idleHandle = window.requestIdleCallback(requestCanvas, {
-        timeout: 1500,
-      });
-      return () => window.cancelIdleCallback(idleHandle);
-    }
-    const timeoutHandle = setTimeout(requestCanvas, 300);
-    return () => clearTimeout(timeoutHandle);
+    const requestCanvasWhenIdle = () => {
+      if ("requestIdleCallback" in window) {
+        idleHandle = window.requestIdleCallback(requestCanvas, {
+          timeout: canvasIdleTimeoutMilliseconds,
+        });
+        return;
+      }
+      requestCanvas();
+    };
+    const scheduleAfterPageSettles = () => {
+      settleTimeoutHandle = setTimeout(
+        requestCanvasWhenIdle,
+        canvasSettleDelayMilliseconds,
+      );
+    };
+    if (document.readyState === "complete") scheduleAfterPageSettles();
+    else
+      window.addEventListener("load", scheduleAfterPageSettles, { once: true });
+    return () => {
+      window.removeEventListener("load", scheduleAfterPageSettles);
+      if (settleTimeoutHandle) clearTimeout(settleTimeoutHandle);
+      if (idleHandle !== undefined && "cancelIdleCallback" in window)
+        window.cancelIdleCallback(idleHandle);
+    };
   }, []);
 
   return (
@@ -39,7 +64,7 @@ export default function FigureStage({ caption }: FigureStageProps) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/figure.webp"
-            alt=""
+            alt={description}
             width={640}
             height={774}
             fetchPriority="high"

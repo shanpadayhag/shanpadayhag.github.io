@@ -19,12 +19,12 @@ export default function HeroSection() {
           className="text-[clamp(4.5rem,13vw,11rem)] leading-none font-semibold tracking-[-0.04em] text-transparent [-webkit-text-stroke:1.5px_var(--border)]"
         />
       </div>
-      <div className="mx-auto grid max-w-6xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8">
         <div>
           <p className="sr-only">{portfolioContent.disciplines}</p>
           <h1
             id="hero-title"
-            className="text-[clamp(3.25rem,8.5vw,6rem)] leading-[0.95] font-semibold tracking-[-0.04em] text-balance"
+            className="text-[clamp(3.25rem,8.5vw,6rem)] leading-[0.95] font-semibold tracking-[-0.04em] text-balance [overflow-wrap:anywhere]"
           >
             <span className="block">{headlineFirstLine}</span>
             <span className="font-accent text-brand block font-normal italic">
@@ -51,7 +51,10 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <FigureStage caption={portfolioContent.identity} />
+        <FigureStage
+          caption={portfolioContent.identity}
+          description={portfolioContent.figureDescription}
+        />
       </div>
     </section>
   );

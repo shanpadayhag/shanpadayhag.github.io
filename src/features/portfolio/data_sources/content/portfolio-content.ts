@@ -9,6 +9,8 @@ export const portfolioContent = {
     "I turn demanding systems into reliable software — from the data underneath to the experience on top.",
   disciplines: "Backend · Frontend · Systems",
   identity: "Shan Padayhag · Software engineer",
+  figureDescription:
+    "Illustrated 3D likeness of Shan Padayhag, smiling and holding up a peace sign",
   workAction: "Explore my work",
   contactAction: "Let’s talk",
   navigation: [
