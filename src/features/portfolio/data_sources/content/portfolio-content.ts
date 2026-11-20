@@ -27,6 +27,34 @@ export const portfolioContent = {
   projectSourceAction: "Explore source",
   projects: [
     {
+      name: "DaiBX",
+      category: "Planning, start to finish",
+      illustration: "planner",
+      illustrationLabel:
+        "Nested tasks and board cards scheduled into a calendar block that tracks time",
+      diagramLabels: [
+        "Nested tasks",
+        "Board",
+        "Calendar",
+        "Tracked time",
+        "Authenticator MFA",
+        "OWASP ASVS 5.0 L2",
+      ],
+      stack:
+        "Rust · Axum · AWS Lambda · PostgreSQL · Supabase · Next.js · Vercel",
+      description:
+        "A planner with nested tasks, a board, and a calendar whose events link back to tasks and cards, plus time tracking and automatic scheduling. Invite-only sign-up with a required authenticator app, built to OWASP ASVS 5.0 Level 2.",
+      note: "Sign-up is invite-only for now.",
+      href: "https://github.com/shanpadayhag/dai-bx-api",
+      additionalLinks: [
+        {
+          label: "Web source",
+          href: "https://github.com/shanpadayhag/dai-bx-web",
+        },
+        { label: "Visit the app", href: "https://dai-bx.vercel.app/" },
+      ],
+    },
+    {
       name: "Showcase Authentication Service",
       category: "Identity & access",
       illustration: "auth",
@@ -42,7 +70,7 @@ export const portfolioContent = {
       ],
       stack: "Rust · Axum · AWS Lambda · PostgreSQL · sqlx · OpenAPI",
       description:
-        "A production-shaped authentication vertical slice: Argon2id password hashing, email verification, JWT access tokens, revocable opaque refresh tokens, contract-first APIs, and end-to-end tests.",
+        "A production-shaped authentication vertical slice: Argon2id password hashing, email verification, JWT access tokens, revocable opaque refresh tokens, a contract-first API, and integration tests that run the whole sign-in flow against PostgreSQL.",
       href: "https://github.com/shanpadayhag/showcase-auth-service",
     },
     {

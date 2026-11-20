@@ -1,9 +1,8 @@
-import { ArrowUpRight } from "lucide-react";
-import { cn } from "@/core/class-names";
 import { portfolioContent } from "@/features/portfolio/data_sources/content/portfolio-content";
-import ProjectVisual from "@/features/portfolio/components/project-visual";
+import ProjectCard from "@/features/portfolio/components/project-card";
 
 export default function ProjectsSection() {
+  const [featuredProject, ...otherProjects] = portfolioContent.projects;
   return (
     <section
       id="projects"
@@ -22,57 +21,18 @@ export default function ProjectsSection() {
             {portfolioContent.selectedIntroduction}
           </p>
         </div>
-        <div className="mt-12 grid gap-5 lg:grid-cols-2 lg:grid-rows-2">
-          {portfolioContent.projects.map((project, projectIndex) => (
-            <article
+        {featuredProject && (
+          <div className="mt-12">
+            <ProjectCard project={featuredProject} isFeatured />
+          </div>
+        )}
+        <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {otherProjects.map((project) => (
+            <ProjectCard
               key={project.name}
-              aria-labelledby={`project-${project.illustration}`}
-              className={cn(
-                "bg-card border-border flex flex-col overflow-hidden rounded-[2rem] border shadow-[0_18px_50px_-32px_rgb(14_21_18/0.4)]",
-                projectIndex === 0 && "lg:row-span-2",
-              )}
-            >
-              <div
-                className={cn(
-                  "bg-accent/70 min-h-64",
-                  projectIndex === 0 && "lg:min-h-80 lg:flex-1",
-                )}
-              >
-                <ProjectVisual project={project} />
-              </div>
-              <div
-                className={cn(
-                  "flex flex-col gap-4 p-7",
-                  projectIndex !== 0 && "flex-1",
-                )}
-              >
-                <div>
-                  <h3
-                    id={`project-${project.illustration}`}
-                    className="text-2xl font-semibold tracking-[-0.02em]"
-                  >
-                    {project.name}
-                  </h3>
-                  <p className="text-primary mt-1 text-sm font-medium">
-                    {project.category}
-                  </p>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                <p className="text-muted-foreground text-sm">{project.stack}</p>
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary mt-auto inline-flex w-fit items-center gap-1.5 pt-2 font-medium underline-offset-4 hover:underline"
-                >
-                  {portfolioContent.projectSourceAction}
-                  <span className="sr-only">: {project.name}</span>
-                  <ArrowUpRight aria-hidden="true" className="size-4" />
-                </a>
-              </div>
-            </article>
+              project={project}
+              isFeatured={false}
+            />
           ))}
         </div>
       </div>

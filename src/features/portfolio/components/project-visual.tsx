@@ -1,4 +1,4 @@
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronRight, Plus } from "lucide-react";
 import type { PortfolioProject } from "@/features/portfolio/data_sources/content/portfolio-content";
 
 type ProjectVisualProps = {
@@ -103,9 +103,73 @@ function StudyVisual({ diagramLabels }: { diagramLabels: string[] }) {
   );
 }
 
+function PlannerVisual({ diagramLabels }: { diagramLabels: string[] }) {
+  const [taskLabel, boardLabel, calendarLabel, trackedLabel] = diagramLabels;
+  return (
+    <div className="flex h-full flex-col items-center justify-center gap-7 p-8">
+      <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="bg-card border-border w-36 rounded-2xl border p-3 shadow-[0_8px_20px_-14px_rgb(14_21_18/0.4)]">
+          <span className="block text-sm font-medium">{taskLabel}</span>
+          <span className="mt-3 block space-y-1.5" aria-hidden="true">
+            <i className="bg-brand/45 block h-1.5 w-full rounded-full" />
+            <i className="bg-border ms-3 block h-1.5 w-[calc(100%-0.75rem)] rounded-full" />
+            <i className="bg-border ms-3 block h-1.5 w-[calc(100%-1.5rem)] rounded-full" />
+          </span>
+        </div>
+        <Plus aria-hidden="true" className="text-muted-foreground size-4" />
+        <div className="bg-background/70 border-border w-28 rounded-2xl border p-2.5">
+          <span className="block px-0.5 text-sm font-medium">{boardLabel}</span>
+          <span
+            className="bg-card border-border mt-2.5 block rounded-lg border p-2"
+            aria-hidden="true"
+          >
+            <i className="bg-brand/45 block h-1.5 w-3/4 rounded-full" />
+          </span>
+          <span
+            className="border-border mt-1.5 block h-6 rounded-lg border border-dashed"
+            aria-hidden="true"
+          />
+        </div>
+        <ChevronRight
+          aria-hidden="true"
+          className="text-muted-foreground size-4 rotate-90 sm:rotate-0"
+        />
+        <div className="bg-card border-border w-32 rounded-2xl border p-3 shadow-[0_8px_20px_-14px_rgb(14_21_18/0.4)]">
+          <span className="block text-sm font-medium">{calendarLabel}</span>
+          <span className="mt-2.5 block space-y-1" aria-hidden="true">
+            <i className="bg-border block h-px w-full" />
+            <i className="bg-brand block h-7 w-full rounded-md shadow-[0_8px_18px_-10px_var(--brand)]" />
+            <i className="bg-border block h-px w-full" />
+          </span>
+          <span className="bg-background/70 mt-2.5 flex w-fit items-center gap-1.5 rounded-full px-2 py-0.5 text-xs">
+            <i
+              className="bg-brand block size-1.5 rounded-full"
+              aria-hidden="true"
+            />
+            {trackedLabel}
+          </span>
+        </div>
+      </div>
+      <div className="text-muted-foreground flex flex-wrap justify-center gap-2 text-xs">
+        {diagramLabels.slice(4).map((diagramLabel) => (
+          <span
+            key={diagramLabel}
+            className="bg-background/70 rounded-full px-2.5 py-1"
+          >
+            {diagramLabel}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ProjectVisual({ project }: ProjectVisualProps) {
   return (
     <div role="img" aria-label={project.illustrationLabel} className="h-full">
+      {project.illustration === "planner" && (
+        <PlannerVisual diagramLabels={project.diagramLabels} />
+      )}
       {project.illustration === "auth" && (
         <AuthenticationVisual diagramLabels={project.diagramLabels} />
       )}
