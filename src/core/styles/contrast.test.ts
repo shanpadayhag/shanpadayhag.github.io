@@ -78,6 +78,32 @@ describe.each([":root", '[data-theme="dark"]'])("the %s theme", (selector) => {
     },
   );
 
+  test("a project screenshot caption on the card's picture area meets 4.5:1", () => {
+    // The picture area is accent at 70 % opacity over the card.
+    const accentHex = getTokenHex("accent");
+    const cardHex = getTokenHex("card");
+    const blendedHex =
+      "#" +
+      [1, 3, 5]
+        .map((channelStart) => {
+          const accentChannel = parseInt(
+            accentHex.slice(channelStart, channelStart + 2),
+            16,
+          );
+          const cardChannel = parseInt(
+            cardHex.slice(channelStart, channelStart + 2),
+            16,
+          );
+          return Math.round(0.7 * accentChannel + 0.3 * cardChannel)
+            .toString(16)
+            .padStart(2, "0");
+        })
+        .join("");
+    expect(
+      calculateContrastRatio(getTokenHex("muted-foreground"), blendedHex),
+    ).toBeGreaterThanOrEqual(4.5);
+  });
+
   test.each(largeTextPairs)(
     "%s on %s meets 3:1 for large text and shapes",
     (textToken, surfaceToken) => {

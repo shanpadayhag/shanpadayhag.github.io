@@ -1,3 +1,5 @@
+import type { ProjectScreenshot } from "@/features/portfolio/entities/project-screenshot";
+
 export const portfolioContent = {
   name: "Shan Padayhag",
   role: "Software engineer",
@@ -33,16 +35,11 @@ export const portfolioContent = {
       name: "DaiBX",
       category: "Planning, start to finish",
       illustration: "planner",
-      illustrationLabel:
-        "Nested tasks and board cards scheduled into a calendar block that tracks time",
-      diagramLabels: [
-        "Nested tasks",
-        "Board",
-        "Calendar",
-        "Tracked time",
-        "Authenticator MFA",
-        "OWASP ASVS 5.0 L2",
-      ],
+      screenshot: {
+        slug: "daibx",
+        alt: "DaiBX board named Personal: a To do list with Plan weekend hike, Renew library card and Book dentist appointment, and a Doing list with Read chapter 4 and Fix bike brakes.",
+        caption: "Sample data · DaiBX web v3.7.0",
+      } satisfies ProjectScreenshot,
       stack:
         "Rust · Axum · AWS Lambda · PostgreSQL · Supabase · Next.js · Vercel",
       description:
@@ -82,14 +79,11 @@ export const portfolioContent = {
       name: "Savings Tracker",
       category: "Local-first finance",
       illustration: "ledger",
-      illustrationLabel:
-        "Layered financial records, from transactional ledgers to reconciliation and reports",
-      diagramLabels: [
-        "Transactional ledger",
-        "Reconciliation",
-        "Read models",
-        "Reports",
-      ],
+      screenshot: {
+        slug: "savings-tracker",
+        alt: "Savings Tracker dashboard: a net worth of $9,432.55, with $4,282.55 in wallets, $5,150.00 in goals and $267.45 spent this month, above a note that the New laptop goal is 53% complete.",
+        caption: "Sample data · Savings Tracker master b3eb39e",
+      } satisfies ProjectScreenshot,
       stack: "Next.js · React · TypeScript · IndexedDB",
       description:
         "A local-first finance application built around transactional ledgers, reconciliation, reports and denormalized read models.",
@@ -97,19 +91,16 @@ export const portfolioContent = {
     },
     {
       name: "Study Aid",
-      category: "Learning, offline",
+      category: "Learning, local-first",
       illustration: "study",
-      illustrationLabel:
-        "A stack of study cards with spaced repetition scheduling",
-      diagramLabels: [
-        "Recall",
-        "Reflect",
-        "Remember",
-        "Spaced repetition · FSRS",
-      ],
-      stack: "Astro · SolidJS · TypeScript · IndexedDB",
+      screenshot: {
+        slug: "study-aid",
+        alt: "Study Aid reviewing a World capitals deck: the answer “Canberra, not Sydney.” is revealed below its question, above the Again, Hard, Good and Easy rating buttons.",
+        caption: "Sample data · Study Aid master f994886",
+      } satisfies ProjectScreenshot,
+      stack: "Next.js · React · TypeScript · IndexedDB",
       description:
-        "An offline study tool with rich cards, attachment management, backups, migrations and an FSRS scheduling integration.",
+        "A local-first study tool with Markdown cards, deduplicated file attachments, backups and an FSRS scheduling integration.",
       href: "https://github.com/shanpadayhag/study-aid",
     },
   ],

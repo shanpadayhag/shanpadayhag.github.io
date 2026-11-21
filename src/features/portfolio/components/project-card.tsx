@@ -5,6 +5,7 @@ import {
   portfolioContent,
   type PortfolioProject,
 } from "@/features/portfolio/data_sources/content/portfolio-content";
+import ProjectScreenshotFigure from "@/features/portfolio/components/project-screenshot-figure";
 import ProjectVisual from "@/features/portfolio/components/project-visual";
 
 type ProjectCardProps = {
@@ -26,7 +27,14 @@ export default function ProjectCard({ project, isFeatured }: ProjectCardProps) {
       )}
     >
       <div className={cn("bg-accent/70 min-h-64", isFeatured && "lg:min-h-96")}>
-        <ProjectVisual project={project} />
+        {project.screenshot ? (
+          <ProjectScreenshotFigure
+            screenshot={project.screenshot}
+            isFeatured={isFeatured}
+          />
+        ) : (
+          <ProjectVisual project={project} />
+        )}
       </div>
       <div
         className={cn(
