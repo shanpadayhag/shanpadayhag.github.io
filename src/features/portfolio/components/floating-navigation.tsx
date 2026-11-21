@@ -5,6 +5,7 @@ import { portfolioContent } from "@/features/portfolio/data_sources/content/port
 const navigationLinks = [
   { label: "Work", href: "/#projects" },
   { label: "About", href: "/#about" },
+  { label: "Notes", href: "/blog/" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -25,7 +26,7 @@ export default function FloatingNavigation() {
           <Link
             key={navigationLink.href}
             href={navigationLink.href}
-            className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200"
+            className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-full px-2 py-2 text-sm font-medium transition-colors duration-200 sm:px-4"
           >
             {navigationLink.label}
           </Link>
